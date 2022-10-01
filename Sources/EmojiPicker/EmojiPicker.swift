@@ -77,8 +77,10 @@ public struct EmojiPicker: View {
     
     @StateObject var viewModel: ViewModel
     
-    init(categories: [EmojiCategory]? = nil) {
+    let didTapEmoji: ((String) -> Void)
+    init(categories: [EmojiCategory]? = nil, didTapEmoji: @escaping ((String) -> Void)) {
         _viewModel = StateObject(wrappedValue: ViewModel(categories: categories))
+        self.didTapEmoji = didTapEmoji
     }
     
     public var body: some View {
@@ -130,6 +132,7 @@ public struct EmojiPicker: View {
     
     func button(for emoji: String) -> some View {
         Button {
+            didTapEmoji(emoji)
         } label: {
             Text(emoji)
                 .font(.system(size: 50))
@@ -142,7 +145,9 @@ public struct EmojiPickerPreview: View {
     public init() { }
     
     public var body: some View {
-        EmojiPicker()
+        EmojiPicker(categories: [.foodAndDrink, .animalsAndNature]) { emoji in
+            
+        }
     }
 }
 

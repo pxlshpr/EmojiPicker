@@ -12,5 +12,5 @@ struct Category: Codable {
 struct Emoji: Codable {
     let emoji: String
     let name: String
-    let keywords: [String]
+    let keywords: String
 }

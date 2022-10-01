@@ -1,43 +1,75 @@
 import SwiftUI
 
-public class ViewModel: ObservableObject {
+extension Emojis {
+    func gridData(for filteredCategories: [EmojiCategory], searchText: String) -> ViewModel.GridData {
+        var gridData = ViewModel.GridData()
+        for filteredCategory in filteredCategories {
+            guard let category = categories.first(where: { $0.name == filteredCategory.rawValue }),
+                  !category.emojis.isEmpty else {
+                continue
+            }
+            
+            let emojis: [Emoji]
+            if searchText.isEmpty {
+                emojis = category.emojis
+            } else {
+                emojis = category.emojis.filter({
+                    //TODO: Include keyword searches here—use regex to match start of words only
+                    $0.name.contains(searchText.lowercased())
+                })
+            }
+            
+            gridData.append(ViewModel.GridSection(
+                category: filteredCategory.description,
+                emojis: emojis.map { $0.emoji }
+            ))
+        }
+        return gridData
+    }
+}
+
+class ViewModel: ObservableObject {
     
-    @Published var searchText = ""
-    @Published var categories: [EmojiCategory]?
-    @Published var emojis: Emojis = Emojis(categories: [])
+    typealias GridSection = (category: String, emojis: [String])
+    typealias GridData = [GridSection]
+
+    @Published public var searchText = "" {
+        didSet {
+            updateGridData()
+        }
+    }
+    @Published public var categories: [EmojiCategory]?
     
-    init(categories: [EmojiCategory]?) {
+    @Published public var gridData: GridData = []
+
+    private var emojis: Emojis = Emojis(categories: [])
+
+    public init(categories: [EmojiCategory]?) {
         self.categories = categories
+        loadEmojisFromFile()
     }
     
-    func loadEmojisFromFile() {
-        let start = CFAbsoluteTimeGetCurrent()
-        guard let path = Bundle.module.path(forResource: "emojis", ofType: "json") else {
-            return
-        }
-        
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            let emojis = try JSONDecoder().decode(Emojis.self, from: data)
-            print("It took us: \(CFAbsoluteTimeGetCurrent()-start)")
-            return
-        } catch {
-            print(error)
-            return
+    public func loadEmojisFromFile() {
+        Task {
+            guard let path = Bundle.module.path(forResource: "emojis", ofType: "json") else {
+                return
+            }
+            
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                self.emojis = try JSONDecoder().decode(Emojis.self, from: data)
+                await MainActor.run {
+                    updateGridData()
+                }
+            } catch {
+                print(error)
+            }
         }
     }
     
-    var filteredEmojis: [String] {
-        if searchText.isEmpty {
-            return []
-//            return foodAndDrink.map { $0.0 }
-        } else {
-            return []
-//            return animalsAndNature.filter {
-//                $0.1.contains(searchText.lowercased())
-//            }
-//            .map { $0.0 }
-        }
+    public func updateGridData() {
+        let categories = categories ?? EmojiCategory.allCases
+        gridData = emojis.gridData(for: categories, searchText: searchText)
     }
 }
 
@@ -64,16 +96,44 @@ public struct EmojiPicker: View {
     }
     
     var grid: some View {
-        LazyVGrid(columns: columns, spacing: 20) {
-            ForEach(viewModel.filteredEmojis, id: \.self) { emoji in
-                Button {
-                } label: {
-                    Text(emoji)
-                        .font(.system(size: 50))
+        LazyVGrid(
+            columns: columns,
+            spacing: 20
+        ) {
+            ForEach(viewModel.gridData, id: \.self.category) { gridSection in
+                if !gridSection.emojis.isEmpty {
+                    section(for: gridSection)
                 }
             }
         }
         .padding(.horizontal)
+    }
+    
+    func section(for gridSection: ViewModel.GridSection) -> some View {
+        @ViewBuilder
+        var header: some View {
+            if viewModel.gridData.count > 1 {
+                Text(gridSection.category)
+                    .font(.system(size: 25, weight: .bold, design: .rounded))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            } else {
+                EmptyView()
+            }
+        }
+        
+        return Section(header: header) {
+            ForEach(gridSection.emojis, id: \.self) { emoji in
+                button(for: emoji)
+            }
+        }
+    }
+    
+    func button(for emoji: String) -> some View {
+        Button {
+        } label: {
+            Text(emoji)
+                .font(.system(size: 50))
+        }
     }
 }
 

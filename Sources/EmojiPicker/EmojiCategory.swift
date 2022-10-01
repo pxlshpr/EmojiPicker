@@ -1,6 +1,6 @@
 import Foundation
 
-public enum EmojiCategory: Equatable {
+public enum EmojiCategory: String, Equatable, CaseIterable {
     case smileysAndPeople
     case animalsAndNature
     case foodAndDrink

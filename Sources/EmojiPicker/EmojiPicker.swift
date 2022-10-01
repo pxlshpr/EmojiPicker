@@ -78,7 +78,7 @@ public struct EmojiPicker: View {
     @StateObject var viewModel: ViewModel
     
     let didTapEmoji: ((String) -> Void)
-    init(categories: [EmojiCategory]? = nil, didTapEmoji: @escaping ((String) -> Void)) {
+    public init(categories: [EmojiCategory]? = nil, didTapEmoji: @escaping ((String) -> Void)) {
         _viewModel = StateObject(wrappedValue: ViewModel(categories: categories))
         self.didTapEmoji = didTapEmoji
     }

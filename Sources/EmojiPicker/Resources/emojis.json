@@ -1,0 +1,2224 @@
+{"categories": [
+	{
+		"name": "animalsAndNature",
+		"emojis": [
+			{
+				"emoji": "🙈",
+				"name": "see-no-evil monkey",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🙉",
+				"name": "hear-no-evil monkey",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🙊",
+				"name": "speak-no-evil monkey",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "💥",
+				"name": "collision",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "💫",
+				"name": "dizzy",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "💦",
+				"name": "sweat droplets",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "💨",
+				"name": "dashing away",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐵",
+				"name": "monkey face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐒",
+				"name": "monkey",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦍",
+				"name": "gorilla",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦧",
+				"name": "orangutan",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐶",
+				"name": "dog face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐕",
+				"name": "dog",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦮",
+				"name": "guide dog",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐕‍🦺",
+				"name": "service dog",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐩",
+				"name": "poodle",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐺",
+				"name": "wolf",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦊",
+				"name": "fox",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦝",
+				"name": "raccoon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐱",
+				"name": "cat face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐈",
+				"name": "cat",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐈‍⬛",
+				"name": "black cat",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦁",
+				"name": "lion",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐯",
+				"name": "tiger face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐅",
+				"name": "tiger",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐆",
+				"name": "leopard",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐴",
+				"name": "horse face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐎",
+				"name": "horse",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦄",
+				"name": "unicorn",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦓",
+				"name": "zebra",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦌",
+				"name": "deer",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦬",
+				"name": "bison",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐮",
+				"name": "cow face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐂",
+				"name": "ox",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐃",
+				"name": "water buffalo",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐄",
+				"name": "cow",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐷",
+				"name": "pig face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐖",
+				"name": "pig",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐗",
+				"name": "boar",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐽",
+				"name": "pig nose",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐏",
+				"name": "ram",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐑",
+				"name": "ewe",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐐",
+				"name": "goat",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐪",
+				"name": "camel",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐫",
+				"name": "two-hump camel",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦙",
+				"name": "llama",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦒",
+				"name": "giraffe",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐘",
+				"name": "elephant",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦣",
+				"name": "mammoth",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦏",
+				"name": "rhinoceros",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦛",
+				"name": "hippopotamus",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐭",
+				"name": "mouse face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐁",
+				"name": "mouse",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐀",
+				"name": "rat",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐹",
+				"name": "hamster",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐰",
+				"name": "rabbit face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐇",
+				"name": "rabbit",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐿️",
+				"name": "chipmunk",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦫",
+				"name": "beaver",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦔",
+				"name": "hedgehog",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦇",
+				"name": "bat",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐻",
+				"name": "bear",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐻‍❄️",
+				"name": "polar bear",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐨",
+				"name": "koala",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐼",
+				"name": "panda",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦥",
+				"name": "sloth",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦦",
+				"name": "otter",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦨",
+				"name": "skunk",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦘",
+				"name": "kangaroo",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦡",
+				"name": "badger",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐾",
+				"name": "paw prints",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦃",
+				"name": "turkey",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐔",
+				"name": "chicken",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐓",
+				"name": "rooster",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐣",
+				"name": "hatching chick",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐤",
+				"name": "baby chick",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐥",
+				"name": "front-facing baby chick",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐦",
+				"name": "bird",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐧",
+				"name": "penguin",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🕊️",
+				"name": "dove",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦅",
+				"name": "eagle",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦆",
+				"name": "duck",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦢",
+				"name": "swan",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦉",
+				"name": "owl",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦤",
+				"name": "dodo",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪶",
+				"name": "feather",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦩",
+				"name": "flamingo",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦚",
+				"name": "peacock",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦜",
+				"name": "parrot",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐸",
+				"name": "frog",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐊",
+				"name": "crocodile",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐢",
+				"name": "turtle",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦎",
+				"name": "lizard",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐍",
+				"name": "snake",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐲",
+				"name": "dragon face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐉",
+				"name": "dragon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦕",
+				"name": "sauropod",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦖",
+				"name": "t-rex",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐳",
+				"name": "spouting whale",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐋",
+				"name": "whale",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐬",
+				"name": "dolphin",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦭",
+				"name": "seal",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐟",
+				"name": "fish",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐠",
+				"name": "tropical fish",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐡",
+				"name": "blowfish",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦈",
+				"name": "shark",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐙",
+				"name": "octopus",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐚",
+				"name": "spiral shell",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪸",
+				"name": "coral",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐌",
+				"name": "snail",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦋",
+				"name": "butterfly",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐛",
+				"name": "bug",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐜",
+				"name": "ant",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐝",
+				"name": "honeybee",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪲",
+				"name": "beetle",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🐞",
+				"name": "lady beetle",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦗",
+				"name": "cricket",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪳",
+				"name": "cockroach",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🕷️",
+				"name": "spider",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🕸️",
+				"name": "spider web",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦂",
+				"name": "scorpion",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦟",
+				"name": "mosquito",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪰",
+				"name": "fly",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪱",
+				"name": "worm",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦠",
+				"name": "microbe",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "💐",
+				"name": "bouquet",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌸",
+				"name": "cherry blossom",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "💮",
+				"name": "white flower",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪷",
+				"name": "lotus",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🏵️",
+				"name": "rosette",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌹",
+				"name": "rose",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🥀",
+				"name": "wilted flower",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌺",
+				"name": "hibiscus",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌻",
+				"name": "sunflower",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌼",
+				"name": "blossom",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌷",
+				"name": "tulip",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌱",
+				"name": "seedling",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪴",
+				"name": "potted plant",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌲",
+				"name": "evergreen tree",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌳",
+				"name": "deciduous tree",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌴",
+				"name": "palm tree",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌵",
+				"name": "cactus",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌾",
+				"name": "sheaf of rice",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌿",
+				"name": "herb",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "☘️",
+				"name": "shamrock",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🍀",
+				"name": "four leaf clover",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🍁",
+				"name": "maple leaf",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🍂",
+				"name": "fallen leaf",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🍃",
+				"name": "leaf fluttering in wind",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪹",
+				"name": "empty nest",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪺",
+				"name": "nest with eggs",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🍄",
+				"name": "mushroom",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌰",
+				"name": "chestnut",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦀",
+				"name": "crab",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦞",
+				"name": "lobster",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦐",
+				"name": "shrimp",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🦑",
+				"name": "squid",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌍",
+				"name": "globe showing europe-africa",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌎",
+				"name": "globe showing americas",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌏",
+				"name": "globe showing asia-australia",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌐",
+				"name": "globe with meridians",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🪨",
+				"name": "rock",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌑",
+				"name": "new moon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌒",
+				"name": "waxing crescent moon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌓",
+				"name": "first quarter moon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌔",
+				"name": "waxing gibbous moon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌕",
+				"name": "full moon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌖",
+				"name": "waning gibbous moon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌗",
+				"name": "last quarter moon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌘",
+				"name": "waning crescent moon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌙",
+				"name": "crescent moon",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌚",
+				"name": "new moon face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌛",
+				"name": "first quarter moon face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌜",
+				"name": "last quarter moon face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "☀️",
+				"name": "sun",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌝",
+				"name": "full moon face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌞",
+				"name": "sun with face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "⭐",
+				"name": "star",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌟",
+				"name": "glowing star",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌠",
+				"name": "shooting star",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "☁️",
+				"name": "cloud",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "⛅",
+				"name": "sun behind cloud",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "⛈️",
+				"name": "cloud with lightning and rain",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌤️",
+				"name": "sun behind small cloud",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌥️",
+				"name": "sun behind large cloud",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌦️",
+				"name": "sun behind rain cloud",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌧️",
+				"name": "cloud with rain",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌨️",
+				"name": "cloud with snow",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌩️",
+				"name": "cloud with lightning",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌪️",
+				"name": "tornado",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌫️",
+				"name": "fog",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌬️",
+				"name": "wind face",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌈",
+				"name": "rainbow",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "☂️",
+				"name": "umbrella",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "☔",
+				"name": "umbrella with rain drops",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "⚡",
+				"name": "high voltage",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "❄️",
+				"name": "snowflake",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "☃️",
+				"name": "snowman",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "⛄",
+				"name": "snowman without snow",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "☄️",
+				"name": "comet",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🔥",
+				"name": "fire",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "💧",
+				"name": "droplet",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🌊",
+				"name": "water wave",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🎄",
+				"name": "christmas tree",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "✨",
+				"name": "sparkles",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🎋",
+				"name": "tanabata tree",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🎍",
+				"name": "pine decoration",
+				"keywords": [
+					
+				]
+			},
+			{
+				"emoji": "🫧",
+				"name": "bubbles",
+				"keywords": [
+					
+				]	
+			}
+		]
+	},
+	{
+		"name": "foodAndDrink",
+		"emojis": [
+			{ 
+				"emoji": "🍇",
+				"name": "grapes",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍈",
+				"name": "melon",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍉",
+				"name": "watermelon",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍊",
+				"name": "tangerine",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍋",
+				"name": "lemon",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍌",
+				"name": "banana",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍍",
+				"name": "pineapple",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥭",
+				"name": "mango",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍎",
+				"name": "red apple",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍏",
+				"name": "green apple",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍐",
+				"name": "pear",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍑",
+				"name": "peach",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍒",
+				"name": "cherries",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍓",
+				"name": "strawberry",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫐",
+				"name": "blueberries",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥝",
+				"name": "kiwi fruit",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍅",
+				"name": "tomato",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫒",
+				"name": "olive",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥥",
+				"name": "coconut",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥑",
+				"name": "avocado",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍆",
+				"name": "eggplant",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥔",
+				"name": "potato",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥕",
+				"name": "carrot",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🌽",
+				"name": "ear of corn",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🌶️",
+				"name": "hot pepper",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫑",
+				"name": "bell pepper",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥒",
+				"name": "cucumber",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥬",
+				"name": "leafy green",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥦",
+				"name": "broccoli",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧄",
+				"name": "garlic",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧅",
+				"name": "onion",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍄",
+				"name": "mushroom",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥜",
+				"name": "peanuts",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫘",
+				"name": "beans",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🌰",
+				"name": "chestnut",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍞",
+				"name": "bread",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥐",
+				"name": "croissant",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥖",
+				"name": "baguette bread",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫓",
+				"name": "flatbread",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥨",
+				"name": "pretzel",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥯",
+				"name": "bagel",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥞",
+				"name": "pancakes",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧇",
+				"name": "waffle",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧀",
+				"name": "cheese wedge",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍖",
+				"name": "meat on bone",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍗",
+				"name": "poultry leg",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥩",
+				"name": "cut of meat",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥓",
+				"name": "bacon",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍔",
+				"name": "hamburger",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍟",
+				"name": "french fries",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍕",
+				"name": "pizza",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🌭",
+				"name": "hot dog",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥪",
+				"name": "sandwich",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🌮",
+				"name": "taco",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🌯",
+				"name": "burrito",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫔",
+				"name": "tamale",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥙",
+				"name": "stuffed flatbread",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧆",
+				"name": "falafel",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥚",
+				"name": "egg",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍳",
+				"name": "cooking",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥘",
+				"name": "shallow pan of food",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍲",
+				"name": "pot of food",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫕",
+				"name": "fondue",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥣",
+				"name": "bowl with spoon",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥗",
+				"name": "green salad",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍿",
+				"name": "popcorn",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧈",
+				"name": "butter",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧂",
+				"name": "salt",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥫",
+				"name": "canned food",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍱",
+				"name": "bento box",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍘",
+				"name": "rice cracker",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍙",
+				"name": "rice ball",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍚",
+				"name": "cooked rice",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍛",
+				"name": "curry rice",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍜",
+				"name": "steaming bowl",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍝",
+				"name": "spaghetti",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍠",
+				"name": "roasted sweet potato",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍢",
+				"name": "oden",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍣",
+				"name": "sushi",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍤",
+				"name": "fried shrimp",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍥",
+				"name": "fish cake with swirl",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥮",
+				"name": "moon cake",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍡",
+				"name": "dango",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥟",
+				"name": "dumpling",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥠",
+				"name": "fortune cookie",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥡",
+				"name": "takeout box",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🦪",
+				"name": "oyster",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍦",
+				"name": "soft ice cream",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍧",
+				"name": "shaved ice",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍨",
+				"name": "ice cream",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍩",
+				"name": "doughnut",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍪",
+				"name": "cookie",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🎂",
+				"name": "birthday cake",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍰",
+				"name": "shortcake",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧁",
+				"name": "cupcake",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥧",
+				"name": "pie",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍫",
+				"name": "chocolate bar",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍬",
+				"name": "candy",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍭",
+				"name": "lollipop",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍮",
+				"name": "custard",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍯",
+				"name": "honey pot",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍼",
+				"name": "baby bottle",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥛",
+				"name": "glass of milk",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "☕",
+				"name": "hot beverage",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫖",
+				"name": "teapot",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍵",
+				"name": "teacup without handle",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍶",
+				"name": "sake",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍾",
+				"name": "bottle with popping cork",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍷",
+				"name": "wine glass",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍸",
+				"name": "cocktail glass",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍹",
+				"name": "tropical drink",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍺",
+				"name": "beer mug",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍻",
+				"name": "clinking beer mugs",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥂",
+				"name": "clinking glasses",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥃",
+				"name": "tumbler glass",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫗",
+				"name": "pouring liquid",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥤",
+				"name": "cup with straw",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧋",
+				"name": "bubble tea",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧃",
+				"name": "beverage box",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧉",
+				"name": "mate",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🧊",
+				"name": "ice",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥢",
+				"name": "chopsticks",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍽️",
+				"name": "fork and knife with plate",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🍴",
+				"name": "fork and knife",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🥄",
+				"name": "spoon",
+				"keywords": [
+				]
+			},
+			{ 
+				"emoji": "🫙",
+				"name": "jar",
+				"keywords": [
+				]
+			}			
+		]
+	}
+]}

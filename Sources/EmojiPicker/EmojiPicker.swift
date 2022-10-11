@@ -37,7 +37,7 @@ public struct EmojiPicker: View {
             return
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             uiTextField.becomeFirstResponder()
             /// Set this so further invocations of the `introspectTextField` modifier doesn't set focus again (this happens during dismissal for example)
             hasBecomeFirstResponder = true

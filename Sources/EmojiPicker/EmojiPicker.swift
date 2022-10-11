@@ -1,13 +1,23 @@
 import SwiftUI
+import Introspect
 
 public struct EmojiPicker: View {
     
     @StateObject var viewModel: ViewModel
-    
+
+    @State var hasBecomeFirstResponder: Bool = false
+
     let didTapEmoji: ((String) -> Void)
-    public init(categories: [EmojiCategory]? = nil, didTapEmoji: @escaping ((String) -> Void)) {
+    let focusOnAppear: Bool
+    
+    public init(
+        categories: [EmojiCategory]? = nil,
+        focusOnAppear: Bool = false,
+        didTapEmoji: @escaping ((String) -> Void)
+    ) {
         _viewModel = StateObject(wrappedValue: ViewModel(categories: categories))
         self.didTapEmoji = didTapEmoji
+        self.focusOnAppear = focusOnAppear
     }
     
     public var body: some View {
@@ -17,6 +27,20 @@ public struct EmojiPicker: View {
             }
             .searchable(text: $viewModel.searchText)
             .navigationTitle("Select an Emoji")
+            .introspectTextField(customize: introspectTextField)
+        }
+    }
+    
+    /// We're using this to focus the textfield seemingly before this view even appears (as the `.onAppear` modifier—shows the keyboard coming up with an animation
+    func introspectTextField(_ uiTextField: UITextField) {
+        guard focusOnAppear, !hasBecomeFirstResponder else {
+            return
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            uiTextField.becomeFirstResponder()
+            /// Set this so further invocations of the `introspectTextField` modifier doesn't set focus again (this happens during dismissal for example)
+            hasBecomeFirstResponder = true
         }
     }
     
@@ -72,7 +96,7 @@ public struct EmojiPickerPreview: View {
     public init() { }
     
     public var body: some View {
-        EmojiPicker() { emoji in
+        EmojiPicker(focusOnAppear: true) { emoji in
             
         }
     }

@@ -15,7 +15,7 @@ let package = Package(
             targets: ["EmojiPicker"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/pxlshpr/SwiftUISugar", from: "0.0.196"),
+        .package(url: "https://github.com/pxlshpr/SwiftUISugar", from: "0.0.200"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

@@ -1,9 +1,12 @@
 import SwiftUI
 import Introspect
+import SwiftUISugar
 
 public struct EmojiPicker: View {
     
     @StateObject var viewModel: ViewModel
+
+    @State var searchIsFocused = false
 
     let didTapEmoji: ((String) -> Void)
     let focusOnAppear: Bool
@@ -20,11 +23,29 @@ public struct EmojiPicker: View {
     
     public var body: some View {
         NavigationView {
-            ScrollView {
-                grid
-            }
+            SearchableView(
+                searchText: $viewModel.searchText,
+                prompt: "Search Emojis",
+                focused: $searchIsFocused,
+                didSubmit: didSubmit,
+                content: {
+                    scrollView
+                })
 //            .searchable(text: $viewModel.searchText)
             .navigationTitle("Select an Emoji")
+            .onAppear {
+                searchIsFocused = true
+            }
+        }
+    }
+    
+    func didSubmit() {
+        
+    }
+    
+    var scrollView: some View {
+        ScrollView {
+            grid
         }
     }
     

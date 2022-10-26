@@ -15,7 +15,6 @@ let package = Package(
             targets: ["EmojiPicker"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/siteline/SwiftUI-Introspect", from: "0.1.4"),
         .package(url: "https://github.com/pxlshpr/SwiftUISugar", from: "0.0.195"),
     ],
     targets: [
@@ -24,7 +23,6 @@ let package = Package(
         .target(
             name: "EmojiPicker",
             dependencies: [
-                .product(name: "Introspect", package: "swiftui-introspect"),
                 .product(name: "SwiftUISugar", package: "swiftuisugar"),
             ],
             resources: [.process("Resources")]

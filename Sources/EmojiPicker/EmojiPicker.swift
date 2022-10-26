@@ -1,5 +1,4 @@
 import SwiftUI
-import Introspect
 import SwiftUISugar
 
 public struct EmojiPicker: View {
@@ -33,6 +32,7 @@ public struct EmojiPicker: View {
                 })
 //            .searchable(text: $viewModel.searchText)
             .navigationTitle("Select an Emoji")
+            .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 searchIsFocused = true
             }

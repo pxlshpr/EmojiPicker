@@ -3,21 +3,24 @@ import SwiftUISugar
 
 public struct EmojiPicker: View {
     
+    @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: ViewModel
-
     @State var searchIsFocused = false
 
     let didTapEmoji: ((String) -> Void)
     let focusOnAppear: Bool
-    
+    let includeCancelButton: Bool
+
     public init(
         categories: [EmojiCategory]? = nil,
         focusOnAppear: Bool = false,
+        includeCancelButton: Bool = false,
         didTapEmoji: @escaping ((String) -> Void)
     ) {
         _viewModel = StateObject(wrappedValue: ViewModel(categories: categories))
         self.didTapEmoji = didTapEmoji
         self.focusOnAppear = focusOnAppear
+        self.includeCancelButton = includeCancelButton
     }
     
     public var body: some View {
@@ -30,12 +33,24 @@ public struct EmojiPicker: View {
                 content: {
                     scrollView
                 })
-//            .searchable(text: $viewModel.searchText)
             .navigationTitle("Select an Emoji")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 if focusOnAppear {
                     searchIsFocused = true
+                }
+            }
+            .toolbar { navigationLeadingItem }
+            .interactiveDismissDisabled(includeCancelButton)
+            .scrollDismissesKeyboard(.immediately)
+        }
+    }
+    
+    var navigationLeadingItem: some ToolbarContent {
+        ToolbarItemGroup(placement: .navigationBarLeading) {
+            if includeCancelButton {
+                Button("Cancel") {
+                    dismiss()
                 }
             }
         }
@@ -103,7 +118,7 @@ public struct EmojiPickerPreview: View {
     public init() { }
     
     public var body: some View {
-        EmojiPicker(focusOnAppear: true) { emoji in
+        EmojiPicker(focusOnAppear: true, includeCancelButton: true) { emoji in
             
         }
     }

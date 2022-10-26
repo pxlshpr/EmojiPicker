@@ -34,7 +34,9 @@ public struct EmojiPicker: View {
             .navigationTitle("Select an Emoji")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
-                searchIsFocused = true
+                if focusOnAppear {
+                    searchIsFocused = true
+                }
             }
         }
     }

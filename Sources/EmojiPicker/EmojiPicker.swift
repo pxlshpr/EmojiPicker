@@ -49,8 +49,10 @@ public struct EmojiPicker: View {
     var navigationLeadingItem: some ToolbarContent {
         ToolbarItemGroup(placement: .navigationBarLeading) {
             if includeCancelButton {
-                Button("Cancel") {
+                Button {
                     dismiss()
+                } label: {
+                    closeButtonLabel
                 }
             }
         }

@@ -27,7 +27,7 @@ public struct EmojiPicker: View {
         NavigationView {
             SearchableView(
                 searchText: $viewModel.searchText,
-                prompt: "Search Emojis",
+                promptSuffix: "Emojis",
                 focused: $searchIsFocused,
                 didSubmit: didSubmit,
                 content: {

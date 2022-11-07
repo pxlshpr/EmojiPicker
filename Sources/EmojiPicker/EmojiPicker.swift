@@ -29,6 +29,7 @@ public struct EmojiPicker: View {
                 searchText: $viewModel.searchText,
                 promptSuffix: "Emojis",
                 focused: $searchIsFocused,
+                focusOnAppear: focusOnAppear,
                 didSubmit: didSubmit,
                 content: {
                     scrollView

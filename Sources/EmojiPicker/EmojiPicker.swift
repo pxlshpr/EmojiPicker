@@ -41,19 +41,19 @@ public struct EmojiPicker: View {
                     searchIsFocused = true
                 }
             }
-            .toolbar { navigationLeadingItem }
+            .toolbar { trailingContents }
             .interactiveDismissDisabled(includeCancelButton)
             .scrollDismissesKeyboard(.immediately)
         }
     }
     
-    var navigationLeadingItem: some ToolbarContent {
-        ToolbarItemGroup(placement: .navigationBarLeading) {
+    var trailingContents: some ToolbarContent {
+        ToolbarItemGroup(placement: .navigationBarTrailing) {
             if includeCancelButton {
                 Button {
                     dismiss()
                 } label: {
-                    closeButtonLabel
+                    CloseButtonLabel(forNavigationBar: true)
                 }
             }
         }

@@ -53,7 +53,7 @@ public struct EmojiPicker: View {
                 Button {
                     dismiss()
                 } label: {
-                    CloseButtonLabel(forNavigationBar: true)
+                    CloseButtonLabel()
                 }
             }
         }

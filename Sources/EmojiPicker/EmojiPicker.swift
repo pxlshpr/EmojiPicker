@@ -42,7 +42,7 @@ public struct EmojiPicker: View {
                 }
             }
             .toolbar { trailingContents }
-            .interactiveDismissDisabled(includeCancelButton)
+//            .interactiveDismissDisabled(includeCancelButton)
             .scrollDismissesKeyboard(.immediately)
         }
     }

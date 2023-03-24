@@ -51,6 +51,7 @@ public struct EmojiPicker: View {
         ToolbarItemGroup(placement: .navigationBarTrailing) {
             if includeCancelButton {
                 Button {
+                    Haptics.feedback(style: .soft)
                     dismiss()
                 } label: {
                     CloseButtonLabel()

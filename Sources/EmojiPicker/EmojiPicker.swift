@@ -11,16 +11,19 @@ public struct EmojiPicker: View {
     let didTapEmoji: ((String) -> Void)
     let focusOnAppear: Bool
     let includeCancelButton: Bool
+    let includeClearButton: Bool
 
     public init(
         categories: [EmojiCategory]? = nil,
         focusOnAppear: Bool = false,
         includeCancelButton: Bool = false,
+        includeClearButton: Bool = false,
         didTapEmoji: @escaping ((String) -> Void)
     ) {
         _viewModel = StateObject(wrappedValue: ViewModel(categories: categories))
         self.didTapEmoji = didTapEmoji
         self.focusOnAppear = focusOnAppear
+        self.includeClearButton = includeClearButton
         self.includeCancelButton = includeCancelButton
     }
     
@@ -42,6 +45,7 @@ public struct EmojiPicker: View {
                     searchIsFocused = true
                 }
             }
+            .toolbar { leadingContents }
             .toolbar { trailingContents }
 //            .interactiveDismissDisabled(includeCancelButton)
             .scrollDismissesKeyboard(.immediately)
@@ -56,6 +60,19 @@ public struct EmojiPicker: View {
                     dismiss()
                 } label: {
                     CloseButtonLabel()
+                }
+            }
+        }
+    }
+    
+    var leadingContents: some ToolbarContent {
+        ToolbarItemGroup(placement: .navigationBarLeading) {
+            if includeClearButton {
+                Button {
+                    Haptics.feedback(style: .soft)
+                    didTapEmoji("")
+                } label: {
+                    Text("Clear")
                 }
             }
         }

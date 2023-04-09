@@ -171,7 +171,7 @@ public struct EmojiPicker: View {
         
         @ViewBuilder
         var header: some View {
-            if model.gridData.count > 1 {s
+            if model.gridData.count > 1 {
                 Text(gridSection.category)
                     .font(.system(size: 25, weight: .bold, design: .rounded))
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -192,11 +192,12 @@ public struct EmojiPicker: View {
     }
     
     func button(for emoji: String) -> some View {
-        Text(emoji)
-            .font(.system(size: size.fontSize))
-            .onTapGesture {
-                didTapEmoji(emoji)
-            }
+        Button {
+            didTapEmoji(emoji)
+        } label: {
+            Text(emoji)
+                .font(.system(size: size.fontSize))
+        }
     }
 }
 

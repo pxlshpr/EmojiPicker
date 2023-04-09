@@ -33,4 +33,20 @@ extension Emojis {
         }
         return gridData
     }
+    
+    func recentStrings(for recents: [String], searchText: String) -> [String] {
+        recents.compactMap {
+            self.emoji(matching: $0)
+        }
+        .filter({
+            guard !searchText.isEmpty else {
+                return true
+            }
+            //TODO: use regex to match start of words only and do other heuristics
+            return $0.name.contains(searchText.lowercased())
+            ||
+            $0.keywords.contains(searchText.lowercased())
+        })
+        .map { $0.emoji }
+    }
 }

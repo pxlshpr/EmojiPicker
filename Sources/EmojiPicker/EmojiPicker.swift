@@ -54,7 +54,7 @@ public struct EmojiPicker: View {
         includeClearButton: Bool = false,
         didTapEmoji: @escaping ((String) -> Void)
     ) {
-        let model = Model(categories: categories)
+        let model = Model(categories: categories, recents: recents.wrappedValue)
         _model = StateObject(wrappedValue: model)
         _recents = recents
         self.size = size
@@ -86,6 +86,10 @@ public struct EmojiPicker: View {
             .toolbar { trailingContents }
 //            .interactiveDismissDisabled(includeCancelButton)
             .scrollDismissesKeyboard(.immediately)
+            .onChange(of: recents) { newValue in
+                model.initialRecents = newValue
+                model.updateData()
+            }
         }
     }
     
@@ -121,7 +125,7 @@ public struct EmojiPicker: View {
     
     var scrollView: some View {
         ScrollView {
-            if !recents.isEmpty {
+            if !model.recents.isEmpty {
                 recentsGrid
             }
             grid
@@ -131,7 +135,7 @@ public struct EmojiPicker: View {
     var grid: some View {
         
         func isFirst(_ index: Int) -> Bool {
-            guard recents.isEmpty else { return false }
+            guard model.recents.isEmpty else { return false }
             return model.gridData.firstIndex(where: { !$0.emojis.isEmpty }) == index
         }
 
@@ -163,7 +167,7 @@ public struct EmojiPicker: View {
 
         return LazyVGrid(columns: columns, spacing: 10) {
             Section(header: header) {
-                ForEach(recents, id: \.self) { emoji in
+                ForEach(model.recents, id: \.self) { emoji in
                     button(for: emoji, fontSize: 50)
                 }
             }

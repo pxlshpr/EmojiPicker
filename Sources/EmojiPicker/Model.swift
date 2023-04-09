@@ -7,16 +7,21 @@ class Model: ObservableObject {
 
     @Published public var searchText = "" {
         didSet {
-            updateGridData()
+            updateData()
         }
     }
     @Published public var categories: [EmojiCategory]?
     @Published public var gridData: GridData = []
 
+    @Published public var initialRecents: [String] = []
+    @Published public var recents: [String] = []
+
     private var emojis: Emojis = Emojis(categories: [])
 
-    public init(categories: [EmojiCategory]?) {
+    public init(categories: [EmojiCategory]?, recents: [String]) {
         self.categories = categories
+        self.initialRecents = recents
+        self.recents = []
         loadEmojisFromFile()
     }
     
@@ -30,7 +35,7 @@ class Model: ObservableObject {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 self.emojis = try JSONDecoder().decode(Emojis.self, from: data)
                 await MainActor.run {
-                    updateGridData()
+                    updateData()
                 }
             } catch {
                 print(error)
@@ -38,9 +43,10 @@ class Model: ObservableObject {
         }
     }
 
-    public func updateGridData() {
+    public func updateData() {
         let categories = categories ?? EmojiCategory.allCases
         gridData = emojis.gridData(for: categories, searchText: searchText)
+        recents = emojis.recentStrings(for: initialRecents, searchText: searchText)
     }
 }
 

@@ -13,7 +13,7 @@ public struct EmojiPicker: View {
     let includeCancelButton: Bool
     let includeClearButton: Bool
     let size: EmojiSize
-    let recents: [String]
+    @Binding var recents: [String]
 
     public enum EmojiSize {
         case large
@@ -46,7 +46,7 @@ public struct EmojiPicker: View {
     }
     
     public init(
-        recents: [String] = [],
+        recents: Binding<[String]> = .constant([]),
         size: EmojiSize = .large,
         categories: [EmojiCategory]? = nil,
         focusOnAppear: Bool = false,
@@ -56,7 +56,7 @@ public struct EmojiPicker: View {
     ) {
         let model = Model(categories: categories)
         _model = StateObject(wrappedValue: model)
-        self.recents = recents
+        _recents = recents
         self.size = size
         self.didTapEmoji = didTapEmoji
         self.focusOnAppear = focusOnAppear
@@ -212,7 +212,7 @@ public struct EmojiPickerPreview: View {
     
     public var body: some View {
         EmojiPicker(
-            recents: ["😎", "🎸", "🫠", "🤯"],
+            recents: .constant(["😎", "🎸", "🫠", "🤯"]),
             size: .small,
             focusOnAppear: true,
             includeCancelButton: true

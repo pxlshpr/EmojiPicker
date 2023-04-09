@@ -121,12 +121,9 @@ public struct EmojiPicker: View {
     
     var scrollView: some View {
         ScrollView {
+            recentsGrid
             grid
         }
-    }
-    
-    var columns: [GridItem] {
-        [GridItem(.adaptive(minimum: size.columnSize))]
     }
     
     var grid: some View {
@@ -135,14 +132,12 @@ public struct EmojiPicker: View {
             guard recents.isEmpty else { return false }
             return model.gridData.firstIndex(where: { !$0.emojis.isEmpty }) == index
         }
-        
-        return LazyVGrid(
-            columns: columns,
-            spacing: size.spacing
-        ) {
-            if !recents.isEmpty {
-                recentsSection
-            }
+
+        var columns: [GridItem] {
+            [GridItem(.adaptive(minimum: size.columnSize))]
+        }
+
+        return LazyVGrid(columns: columns, spacing: size.spacing) {
             ForEach(model.gridData.indices, id: \.self) { i in
                 if !model.gridData[i].emojis.isEmpty {
                     section(for: model.gridData[i], isFirst: isFirst(i))
@@ -151,19 +146,27 @@ public struct EmojiPicker: View {
         }
         .padding(.horizontal)
     }
-    
-    var recentsSection: some View {
+
+    var recentsGrid: some View {
+
         var header: some View {
             Text("Recents")
                 .font(.system(size: 25, weight: .bold, design: .rounded))
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         
-        return Section(header: header) {
-            ForEach(recents, id: \.self) { emoji in
-                button(for: emoji)
+        var columns: [GridItem] {
+            [GridItem(.adaptive(minimum: 50))]
+        }
+
+        return LazyVGrid(columns: columns, spacing: 10) {
+            Section(header: header) {
+                ForEach(recents, id: \.self) { emoji in
+                    button(for: emoji, fontSize: 50)
+                }
             }
         }
+        .padding(.horizontal)
     }
     
     func section(for gridSection: Model.GridSection, isFirst: Bool = false) -> some View {
@@ -191,12 +194,12 @@ public struct EmojiPicker: View {
         }
     }
     
-    func button(for emoji: String) -> some View {
+    func button(for emoji: String, fontSize: CGFloat? = nil) -> some View {
         Button {
             didTapEmoji(emoji)
         } label: {
             Text(emoji)
-                .font(.system(size: size.fontSize))
+                .font(.system(size: fontSize ?? size.fontSize))
         }
     }
 }

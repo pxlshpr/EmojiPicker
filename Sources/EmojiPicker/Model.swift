@@ -1,8 +1,8 @@
 import SwiftUI
 
-class ViewModel: ObservableObject {
+class Model: ObservableObject {
     
-    typealias GridSection = (category: String, emojis: [String])
+    typealias GridSection = (category: String, emojis: [EmojiWithCategory])
     typealias GridData = [GridSection]
 
     @Published public var searchText = "" {
@@ -11,7 +11,6 @@ class ViewModel: ObservableObject {
         }
     }
     @Published public var categories: [EmojiCategory]?
-    
     @Published public var gridData: GridData = []
 
     private var emojis: Emojis = Emojis(categories: [])
@@ -42,5 +41,19 @@ class ViewModel: ObservableObject {
     public func updateGridData() {
         let categories = categories ?? EmojiCategory.allCases
         gridData = emojis.gridData(for: categories, searchText: searchText)
+    }
+}
+
+struct EmojiWithCategory: Identifiable, Hashable, Equatable {
+    let category: EmojiCategory?
+    let emoji: String
+    
+    init(category: EmojiCategory? = nil, emoji: String) {
+        self.category = category
+        self.emoji = emoji
+    }
+    
+    var id: String {
+        "\(category?.description ?? "recents")-\(emoji)"
     }
 }

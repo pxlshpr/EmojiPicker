@@ -1,8 +1,8 @@
 import Foundation
 
 extension Emojis {
-    func gridData(for filteredCategories: [EmojiCategory], searchText: String) -> ViewModel.GridData {
-        var gridData = ViewModel.GridData()
+    func gridData(for filteredCategories: [EmojiCategory], searchText: String) -> Model.GridData {
+        var gridData = Model.GridData()
         for filteredCategory in filteredCategories {
             guard let category = categories.first(where: { $0.name == filteredCategory.rawValue }),
                   !category.emojis.isEmpty else {
@@ -21,9 +21,14 @@ extension Emojis {
                 })
             }
             
-            gridData.append(ViewModel.GridSection(
+            gridData.append(Model.GridSection(
                 category: filteredCategory.description,
-                emojis: emojis.map { $0.emoji }
+                emojis: emojis.map {
+                    EmojiWithCategory(
+                        category: filteredCategory,
+                        emoji: $0.emoji
+                    )
+                }
             ))
         }
         return gridData

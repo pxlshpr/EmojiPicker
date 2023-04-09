@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "marqueetext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pxlshpr/MarqueeText",
+      "state" : {
+        "revision" : "a73d27acbd88c3cacf660108995db93a99e98c1d",
+        "version" : "0.0.1"
+      }
+    },
+    {
       "identity" : "swifthaptics",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pxlshpr/SwiftHaptics",
@@ -23,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pxlshpr/SwiftSugar",
       "state" : {
-        "revision" : "06f08db0baa5f0f2dd650dfa35a740c91fae671e",
-        "version" : "0.0.88"
+        "revision" : "06911f63888b10a5c860407220033e7396e8ef17",
+        "version" : "0.0.90"
       }
     },
     {
@@ -41,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pxlshpr/SwiftUISugar",
       "state" : {
-        "revision" : "e9ea3700429040204fdd9cc3a97e15230f1b8acd",
-        "version" : "0.0.376"
+        "revision" : "deacdec7d030847f45b35ecf3dbc0453591f3841",
+        "version" : "0.0.388"
       }
     }
   ],

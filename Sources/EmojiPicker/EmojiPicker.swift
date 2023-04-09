@@ -121,7 +121,9 @@ public struct EmojiPicker: View {
     
     var scrollView: some View {
         ScrollView {
-            recentsGrid
+            if !recents.isEmpty {
+                recentsGrid
+            }
             grid
         }
     }

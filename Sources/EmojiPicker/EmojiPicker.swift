@@ -197,12 +197,11 @@ public struct EmojiPicker: View {
     }
     
     func button(for emoji: String, fontSize: CGFloat? = nil) -> some View {
-        Button {
-            didTapEmoji(emoji)
-        } label: {
-            Text(emoji)
-                .font(.system(size: fontSize ?? size.fontSize))
-        }
+        Text(emoji)
+            .font(.system(size: fontSize ?? size.fontSize))
+            .onTapGesture {
+                didTapEmoji(emoji)
+            }
     }
 }
 

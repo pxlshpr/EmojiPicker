@@ -1,5 +1,22 @@
 import Foundation
 
+struct EmojisFileGroup: Codable {
+    let name: String
+    let slug: String
+    let emojis: [EmojisFileEmoji]
+}
+
+struct EmojisFileEmoji: Codable {
+    let emoji: String
+    let skin_tone_support: Bool
+    let name: String
+    let slug: String
+    let unicode_version: String
+    let emoji_version: String
+}
+
+//MARK: - Legacy
+
 struct Emojis: Codable {
     let categories: [Category]
     

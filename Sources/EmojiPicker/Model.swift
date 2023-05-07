@@ -18,14 +18,59 @@ class Model: ObservableObject {
 
     private var emojis: Emojis = Emojis(categories: [])
 
+    private var emojiGroups: [EmojisFileGroup] = []
+    
+    private var keywords: [String: [String]] = [:]
+
     public init(categories: [EmojiCategory]?, recents: [String]) {
         self.categories = categories
         self.initialRecents = recents
         self.recents = []
         loadEmojisFromFile()
     }
-    
+
     public func loadEmojisFromFile() {
+        Task {
+            do {
+                
+                guard let emojisPath = Bundle.module.path(
+                    forResource: "emojis-by-group",
+                    ofType: "json")
+                else { return }
+                
+                let emojisData = try Data(
+                    contentsOf: URL(fileURLWithPath: emojisPath),
+                    options: .mappedIfSafe
+                )
+                self.emojiGroups = try JSONDecoder().decode(
+                    [EmojisFileGroup].self,
+                    from: emojisData
+                )
+
+                guard let keywordsPath = Bundle.module.path(
+                    forResource: "emoji-keywords",
+                    ofType: "json")
+                else { return }
+                
+                let keywordsData = try Data(
+                    contentsOf: URL(fileURLWithPath: keywordsPath),
+                    options: .mappedIfSafe
+                )
+                self.keywords = try JSONDecoder().decode(
+                    [String : [String]].self,
+                    from: keywordsData
+                )
+                
+                await MainActor.run {
+                    updateData()
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    public func loadEmojisFromFile_legacy() {
         Task {
             guard let path = Bundle.module.path(forResource: "emojis", ofType: "json") else {
                 return
@@ -45,8 +90,21 @@ class Model: ObservableObject {
 
     public func updateData() {
         let categories = categories ?? EmojiCategory.allCases
-        gridData = emojis.gridData(for: categories, searchText: searchText)
-        recents = emojis.recentStrings(for: initialRecents, searchText: searchText)
+
+        gridData = emojiGroups.gridData(
+            for: categories,
+            searchText: searchText,
+            allKeywords: keywords
+        )
+        recents = emojiGroups.recentStrings(
+            for: initialRecents,
+            searchText: searchText,
+            allKeywords: keywords
+        )
+        
+//        gridData = emojis.gridData(for: categories, searchText: searchText)
+//        recents = emojis.recentStrings(for: initialRecents, searchText: searchText)
+        
     }
 }
 

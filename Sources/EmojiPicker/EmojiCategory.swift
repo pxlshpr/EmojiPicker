@@ -30,4 +30,25 @@ public enum EmojiCategory: String, Equatable, CaseIterable {
             return "Flags"
         }
     }
+    
+    var emojisFileDescriptions: [String] {
+        switch self {
+        case .smileysAndPeople:
+            return ["Smileys & Emotion", "People & Body"]
+        case .animalsAndNature:
+            return ["Animals & Nature"]
+        case .foodAndDrink:
+            return ["Food & Drink"]
+        case .activity:
+            return ["Activities"]
+        case .travelAndPlaces:
+            return ["Travel & Places"]
+        case .objects:
+            return ["Objects"]
+        case .symbols:
+            return ["Symbols"]
+        case .flags:
+            return ["Flags"]
+        }
+    }
 }

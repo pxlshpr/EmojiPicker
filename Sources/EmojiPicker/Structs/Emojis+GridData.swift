@@ -61,22 +61,24 @@ extension Array where Element == EmojisFileGroup {
         
         var gridData = Model.GridData()
         for filteredCategory in filteredCategories {
-            guard let category = self.first(where: {
+            
+            /// Get the categories matching
+            let categories = self.filter({
                 filteredCategory.emojisFileDescriptions.contains($0.name)
-            }),
-                  !category.emojis.isEmpty
-            else {
-                continue
-            }
+                && !$0.emojis.isEmpty
+            })
+            
+            guard !categories.isEmpty else { continue }
             
             let emojis: [EmojisFileEmoji]
             if searchText.isEmpty {
-                emojis = category.emojis
+                emojis = categories.reduce([]) { $0 + $1.emojis }
             } else {
                 
+                let allEmojis = categories.reduce([]) { $0 + $1.emojis }
+                
                 let string = searchText.lowercased()
-                //TODO: Do this
-                emojis = category.emojis.filter({ emoji in
+                emojis = allEmojis.filter({ emoji in
                     
                     let keywords = allKeywords[emoji.emoji] ?? []
                     

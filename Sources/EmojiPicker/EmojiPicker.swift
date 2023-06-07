@@ -1,6 +1,9 @@
 import SwiftUI
-import SwiftUISugar
+
 import SwiftHaptics
+import SearchableView
+import FormSugar
+import ViewSugar
 
 public struct EmojiPicker: View {
     

@@ -113,8 +113,8 @@ public struct EmojiPicker: View {
         ToolbarItemGroup(placement: .navigationBarLeading) {
             if includeClearButton {
                 Button {
-                    Haptics.feedback(style: .soft)
                     didTapEmoji("")
+                    dismiss()
                 } label: {
                     Text("Clear")
                 }
@@ -208,6 +208,7 @@ public struct EmojiPicker: View {
             .font(.system(size: fontSize ?? size.fontSize))
             .onTapGesture {
                 didTapEmoji(emoji)
+                dismiss()
             }
     }
 }

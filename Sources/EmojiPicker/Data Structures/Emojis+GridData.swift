@@ -1,8 +1,8 @@
 import Foundation
 
 extension Emojis {
-    func gridData(for filteredCategories: [EmojiCategory], searchText: String) -> Model.GridData {
-        var gridData = Model.GridData()
+    func gridData(for filteredCategories: [EmojiCategory], searchText: String) -> EmojiPickerModel.GridData {
+        var gridData = EmojiPickerModel.GridData()
         for filteredCategory in filteredCategories {
             guard let category = categories.first(where: { $0.name == filteredCategory.rawValue }),
                   !category.emojis.isEmpty else {
@@ -21,7 +21,7 @@ extension Emojis {
                 })
             }
             
-            gridData.append(Model.GridSection(
+            gridData.append(EmojiPickerModel.GridSection(
                 category: filteredCategory.description,
                 emojis: emojis.map {
                     EmojiWithCategory(
@@ -57,9 +57,9 @@ extension Array where Element == EmojisFileGroup {
         for filteredCategories: [EmojiCategory],
         searchText: String,
         allKeywords: [String : [String]]
-    ) -> Model.GridData {
+    ) -> EmojiPickerModel.GridData {
         
-        var gridData = Model.GridData()
+        var gridData = EmojiPickerModel.GridData()
         for filteredCategory in filteredCategories {
             
             /// Get the categories matching
@@ -88,14 +88,14 @@ extension Array where Element == EmojisFileGroup {
                     keywords.contains(where: { $0.contains(string) })
                     
                     if bool {
-                        print("\(emoji.emoji): \(keywords.joined(separator: ";"))")
+                        emojiPickerLogger.debug("\(emoji.emoji): \(keywords.joined(separator: ";"))")
                     }
                     
                     return bool
                 })
             }
             
-            gridData.append(Model.GridSection(
+            gridData.append(EmojiPickerModel.GridSection(
                 category: filteredCategory.description,
                 emojis: emojis.map {
                     EmojiWithCategory(
@@ -141,10 +141,10 @@ extension Array where Element == EmojisFileGroup {
             keywords.contains(where: { $0.contains(string) })
             
             if bool {
-                print("\(emoji.emoji): \(keywords.joined(separator: ";"))")
+                emojiPickerLogger.debug("\(emoji.emoji): \(keywords.joined(separator: ";"))")
             }
 
-            return bool            
+            return bool
         })
         .map { $0.emoji }
     }

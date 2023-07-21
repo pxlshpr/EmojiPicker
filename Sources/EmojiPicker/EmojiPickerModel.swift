@@ -1,39 +1,39 @@
 import SwiftUI
 
-class Model: ObservableObject {
+@Observable class EmojiPickerModel {
     
     typealias GridSection = (category: String, emojis: [EmojiWithCategory])
     typealias GridData = [GridSection]
 
-    @Published public var searchText = "" {
+    var searchText = "" {
         didSet {
             updateData()
         }
     }
-    @Published public var categories: [EmojiCategory]?
-    @Published public var gridData: GridData = []
+    var categories: [EmojiCategory]? = nil
+    var gridData: GridData = []
 
-    @Published public var initialRecents: [String] = []
-    @Published public var recents: [String] = []
+    var initialRecents: [String] = []
+    var recents: [String] = []
 
-    private var emojis: Emojis = Emojis(categories: [])
+    var emojis: Emojis = Emojis(categories: [])
 
-    private var emojiGroups: [EmojisFileGroup] = []
+    var emojiGroups: [EmojisFileGroup] = []
     
-    private var keywords: [String: [String]] = [:]
+    var keywords: [String: [String]] = [:]
 
-    public init(categories: [EmojiCategory]?, recents: [String]) {
+    init(categories: [EmojiCategory]?, recents: [String]) {
         self.categories = categories
         self.initialRecents = recents
         self.recents = []
         loadEmojisFromFile()
     }
 
-    public func loadEmojisFromFile() {
+    func loadEmojisFromFile() {
         Task {
             do {
                 
-                guard let emojisPath = Bundle.module.path(
+                guard let emojisPath = Bundle.main.path(
                     forResource: "emojis-by-group",
                     ofType: "json")
                 else { return }
@@ -47,7 +47,7 @@ class Model: ObservableObject {
                     from: emojisData
                 )
 
-                guard let keywordsPath = Bundle.module.path(
+                guard let keywordsPath = Bundle.main.path(
                     forResource: "emoji-keywords",
                     ofType: "json")
                 else { return }
@@ -65,30 +65,12 @@ class Model: ObservableObject {
                     updateData()
                 }
             } catch {
-                print(error)
+                emojiPickerLogger.error("Error: \(error, privacy: .public)")
             }
         }
     }
     
-    public func loadEmojisFromFile_legacy() {
-        Task {
-            guard let path = Bundle.module.path(forResource: "emojis", ofType: "json") else {
-                return
-            }
-            
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                self.emojis = try JSONDecoder().decode(Emojis.self, from: data)
-                await MainActor.run {
-                    updateData()
-                }
-            } catch {
-                print(error)
-            }
-        }
-    }
-
-    public func updateData() {
+    func updateData() {
         let categories = categories ?? EmojiCategory.allCases
 
         gridData = emojiGroups.gridData(
@@ -101,23 +83,5 @@ class Model: ObservableObject {
             searchText: searchText,
             allKeywords: keywords
         )
-        
-//        gridData = emojis.gridData(for: categories, searchText: searchText)
-//        recents = emojis.recentStrings(for: initialRecents, searchText: searchText)
-        
-    }
-}
-
-struct EmojiWithCategory: Identifiable, Hashable, Equatable {
-    let category: EmojiCategory?
-    let emoji: String
-    
-    init(category: EmojiCategory? = nil, emoji: String) {
-        self.category = category
-        self.emoji = emoji
-    }
-    
-    var id: String {
-        "\(category?.description ?? "recents")-\(emoji)"
     }
 }

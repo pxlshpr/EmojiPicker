@@ -1,15 +1,20 @@
 import SwiftUI
+import OSLog
 
 import SwiftHaptics
-import SearchableView
 import FormSugar
 import ViewSugar
+
+let emojiPickerLogger = Logger(subsystem: "EmojiPicker", category: "")
 
 public struct EmojiPicker: View {
     
     @Environment(\.dismiss) var dismiss
-    @StateObject var model: Model
     @State var searchIsFocused = false
+    @State var model: EmojiPickerModel
+
+    @State var searchIsActive: Bool = false
+    @State var hasAppeared = false
 
     let didTapEmoji: ((String) -> Void)
     let focusOnAppear: Bool
@@ -50,15 +55,15 @@ public struct EmojiPicker: View {
     
     public init(
         recents: Binding<[String]> = .constant([]),
-        size: EmojiSize = .large,
+        size: EmojiSize = .small,
         categories: [EmojiCategory]? = nil,
         focusOnAppear: Bool = false,
         includeCancelButton: Bool = false,
         includeClearButton: Bool = false,
         didTapEmoji: @escaping ((String) -> Void)
     ) {
-        let model = Model(categories: categories, recents: recents.wrappedValue)
-        _model = StateObject(wrappedValue: model)
+        let model = EmojiPickerModel(categories: categories, recents: recents.wrappedValue)
+        _model = State(initialValue: model)
         _recents = recents
         self.size = size
         self.didTapEmoji = didTapEmoji
@@ -68,62 +73,38 @@ public struct EmojiPicker: View {
     }
     
     public var body: some View {
-        NavigationView {
-            SearchableView(
-                searchText: $model.searchText,
-                promptSuffix: "Emojis",
-                focused: $searchIsFocused,
-//                focusOnAppear: focusOnAppear,
-                didSubmit: didSubmit,
-                content: {
-                    scrollView
-                })
-            .navigationTitle("Select an Emoji")
-            .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
-//                if focusOnAppear {
-//                    searchIsFocused = true
-//                }
+        Group {
+            if hasAppeared {
+                scrollView
+                    .searchable(text: $model.searchText, isPresented: $searchIsActive, placement: .toolbar)
+            } else {
+                Color.clear
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            withAnimation(.snappy) {
+                                hasAppeared = true
+                            }
+                        }
+                    }
             }
-            .toolbar { leadingContents }
-            .toolbar { trailingContents }
-//            .interactiveDismissDisabled(includeCancelButton)
-            .scrollDismissesKeyboard(.immediately)
-            .onChange(of: recents) { newValue in
-                model.initialRecents = newValue
-                model.updateData()
-            }
+        }
+        .navigationTitle("Choose Emoji")
+        .toolbar { trailingContent }
+        .toolbar { bottomContent }
+        .onChange(of: recents) { oldValue, newValue in
+            model.initialRecents = newValue
+            model.updateData()
         }
     }
     
-    var trailingContents: some ToolbarContent {
-        ToolbarItemGroup(placement: .navigationBarTrailing) {
-            if includeCancelButton {
-                Button {
-                    Haptics.feedback(style: .soft)
-                    dismiss()
-                } label: {
-                    CloseButtonLabel()
-                }
+    var bottomContent: some ToolbarContent {
+        ToolbarItemGroup(placement: .bottomBar) {
+            Button {
+                searchIsActive = true
+            } label: {
+                Image(systemName: "magnifyingglass")
             }
         }
-    }
-    
-    var leadingContents: some ToolbarContent {
-        ToolbarItemGroup(placement: .navigationBarLeading) {
-            if includeClearButton {
-                Button {
-                    didTapEmoji("")
-                    dismiss()
-                } label: {
-                    Text("Clear")
-                }
-            }
-        }
-    }
-    
-    func didSubmit() {
-        
     }
     
     var scrollView: some View {
@@ -132,6 +113,20 @@ public struct EmojiPicker: View {
                 recentsGrid
             }
             grid
+        }
+    }
+    
+    var trailingContent: some ToolbarContent {
+        ToolbarItemGroup(placement: .topBarTrailing) {
+            if includeClearButton {
+                Button {
+                    Haptics.selectionFeedback()
+                    didTapEmoji("")
+                    dismiss()
+                } label: {
+                    Text("Clear")
+                }
+            }
         }
     }
     
@@ -178,7 +173,7 @@ public struct EmojiPicker: View {
         .padding(.horizontal)
     }
     
-    func section(for gridSection: Model.GridSection, isFirst: Bool = false) -> some View {
+    func section(for gridSection: EmojiPickerModel.GridSection, isFirst: Bool = false) -> some View {
         
         
         @ViewBuilder
@@ -210,29 +205,5 @@ public struct EmojiPicker: View {
                 didTapEmoji(emoji)
                 dismiss()
             }
-    }
-}
-
-public struct EmojiPickerPreview: View {
-    
-    @Environment(\.dismiss) var dismiss
-    
-    public init() { }
-    
-    public var body: some View {
-        EmojiPicker(
-            recents: .constant(["😎", "🎸", "🫠", "🤯"]),
-            size: .small,
-            focusOnAppear: true,
-            includeCancelButton: true
-        ) { emoji in
-            dismiss()
-        }
-    }
-}
-
-struct EmojiPicker_Previews: PreviewProvider {
-    static var previews: some View {
-        EmojiPickerPreview()
     }
 }

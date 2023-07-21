@@ -33,7 +33,7 @@ import SwiftUI
         Task {
             do {
                 
-                guard let emojisPath = Bundle.main.path(
+                guard let emojisPath = Bundle.module.path(
                     forResource: "emojis-by-group",
                     ofType: "json")
                 else { return }
@@ -47,7 +47,7 @@ import SwiftUI
                     from: emojisData
                 )
 
-                guard let keywordsPath = Bundle.main.path(
+                guard let keywordsPath = Bundle.module.path(
                     forResource: "emoji-keywords",
                     ofType: "json")
                 else { return }
